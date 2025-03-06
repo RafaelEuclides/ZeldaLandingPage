@@ -3,8 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://rafaeleuclides.github.io/ZeldaLandingPage/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d build",
     "dev": "vite",
+    "start" : "tsc -b && vite start",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -25,6 +29,5 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
-  },
-  "homepage": "https://rafaeleuclides.github.io/ZeldaLandingPage/"
+  }
 }

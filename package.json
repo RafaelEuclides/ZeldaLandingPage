@@ -6,7 +6,7 @@
   "homepage": "https://rafaeleuclides.github.io/ZeldaLandingPage/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build",
+    "deploy" : "master -d build",
     "dev": "vite",
     "start" : "tsc -b && vite start",
     "build": "tsc -b && vite build",

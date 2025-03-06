@@ -1,15 +1,15 @@
 {
   "name": "zelda-landing-page",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://rafaeleuclides.github.io/ZeldaLandingPage/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy" : "master -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "start" : "tsc -b && vite start",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "start": "tsc -b && vite start",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +25,7 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",

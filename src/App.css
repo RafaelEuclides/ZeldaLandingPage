@@ -1,0 +1,250 @@
+/* Reset de margin, padding e box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte Bourbon - Importando da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bourbon&display=swap');
+
+/* Corpo da página */
+body {
+  font-family: 'Bourbon', sans-serif; /* Aplicando a fonte Bourbon */
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Gradiente moderno em azul claro e azul céu */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinhamento ao topo para acomodar o header fixo */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  padding-top: 47px; /* Espaço para o header fixo */
+}
+
+/* Estilo da Landing Page */
+.landing-page {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Modernização do Header */
+.header {
+  position: fixed; /* Fixar o header no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Garantir que o header ocupe 100% da largura */
+  height: 47px; /* Altura fixa de 47px */
+  background: linear-gradient(135deg, #0a3d7e, #4f83cc); /* Gradiente com azul escuro e azul claro */
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Espaçar os ícones e o título */
+  align-items: center; /* Centralizar verticalmente o conteúdo dentro do header */
+  padding: 0 20px; /* Adicionando espaçamento lateral */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo do header */
+  z-index: 10;
+}
+
+/* Título no Header */
+.header h1 {
+  font-size: 1.5rem; /* Ajustar o tamanho do título para cabe em 47px de altura */
+  font-weight: 700;
+  margin: 0; /* Remover margens do título */
+  letter-spacing: -1px;
+}
+
+/* Ícones no Header */
+.header .icons {
+  display: flex;
+  align-items: center;
+}
+
+.header .icon {
+  margin-left: 20px;
+  font-size: 1.5rem; /* Ajustar o tamanho dos ícones para o header */
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header .icon:hover {
+  color: #ff6f00; /* Cor de destaque no hover */
+}
+
+/* Seção de Imagem */
+.image-section {
+  margin: 50px 0;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05); /* Efeito sutil de zoom na imagem */
+}
+
+/* Seção de Descrição */
+.description {
+  padding: 50px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.description p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Botão de Call to Action (CTA) */
+.cta {
+  margin-top: 40px;
+}
+
+.cta-button {
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #012839; /* Cor vibrante de laranja */
+  border: none;
+  border-radius: 8px; /* Borda suavizada, ajustada para 8px */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease-in; /* Corrigindo a transição do box-shadow */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.cta-button:hover {
+  background-color: #00c7ec;
+  transform: translateY(-3px); /* Efeito de "levitar" mais intenso */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito Shiny no Botão */
+.cta-button:before {
+  content: '';
+  display: block;
+  width: 0%; /* Inicialmente o brilho não tem largura */
+  height: 90%; /* Ajuste para um brilho mais sutil */
+  position: absolute;
+  top: 5%; /* Posição do brilho em relação ao botão */
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 15px 3px white;
+  transform: skewX(-20deg);
+}
+
+.cta-button:hover:before {
+  width: 0.2rem; /* A largura do brilho agora ocupa metade do botão */
+  opacity: 1;
+  animation: shine 0.5s linear forwards; /* Animação de brilho */
+}
+
+/* Animação de Brilho */
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+/* Efeito ativo do botão */
+.cta-button:active {
+  transform: translateY(3px); /* Efeito de "pressionar" mais forte no clique */
+  box-shadow: 0 0 0 0 transparent;
+}
+
+/* Estilo do Footer */
+.footer {
+  background-color: #0a3d7e; /* Cor de fundo do footer, semelhante ao header */
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Conteúdo do Footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Círculo com o nome do jogo */
+.circle {
+  background-color: #4f83cc; /* Cor de fundo do círculo */
+  border-radius: 50%; /* Tornar o div circular */
+  width: 150px; /* Tamanho fixo do círculo */
+  height: 150px; /* Tamanho fixo do círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Espaçamento entre o círculo e as informações de contato */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras sutis para o círculo */
+}
+
+.circle-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Informações de Contato */
+.contact-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #fff;
+  font-weight: 300;
+}
+
+.contact-info p:hover {
+  color: #ff6f00; /* Cor de destaque no hover */
+  transition: color 0.3s ease;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-text {
+    font-size: 1rem;
+  }
+}

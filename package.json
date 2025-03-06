@@ -1,6 +1,6 @@
 {
   "name": "zelda-landing-page",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://rafaeleuclides.github.io/ZeldaLandingPage/",
